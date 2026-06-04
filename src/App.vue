@@ -1,6 +1,6 @@
 <script setup>
 import { computed, ref, watch, onErrorCaptured } from 'vue'
-import { useRoute, useRouter } from 'vue-router'
+import { useRoute, useRouter, RouterLink } from 'vue-router'
 import Navbar from '@/components/layout/Navbar.vue'
 import Footer from '@/components/layout/Footer.vue'
 import RouteProgress from '@/components/ui/RouteProgress.vue'
