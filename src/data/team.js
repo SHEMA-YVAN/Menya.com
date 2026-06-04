@@ -3,13 +3,13 @@
 export const team = [
   {
     id: 't1',
-    name: 'Aline Uwase',
+    name: 'Shema Ngabo Yvan',
     role: 'Product Lead & Frontend Engineer',
-    bio: 'Drives MENYA\u2019s product vision and crafts the interface. Passionate about accessible, learner-first design for Rwandan classrooms.',
+    bio: 'Drives MENYA\'s product vision and crafts the interface. Passionate about accessible, learner-first design for Rwandan classrooms.',
     avatar: 1,
-    photo: '/team/aline.jpg',
+    photo: '/team/ngabo.png',
     socials: {
-      portfolio: 'https://example.com/aline',
+      portfolio: 'https://personal-portfolio-green-psi.vercel.app/',
       github: 'https://github.com/',
       linkedin: 'https://linkedin.com/',
       twitter: 'https://twitter.com/',
@@ -17,7 +17,7 @@ export const team = [
   },
   {
     id: 't2',
-    name: 'Eric Niyonkuru',
+    name: 'Shema Landry',
     role: 'Full-Stack Engineer',
     bio: 'Builds the data architecture and reusable component system. Believes great engineering makes learning feel effortless.',
     avatar: 2,
@@ -31,7 +31,7 @@ export const team = [
   },
   {
     id: 't3',
-    name: 'Divine Mukamana',
+    name: 'Agatesi Ange Mugasa',
     role: 'UI/UX Designer',
     bio: 'Shapes MENYA\u2019s visual language and interaction patterns. Focused on clarity, motion and a premium learning experience.',
     avatar: 3,
@@ -45,7 +45,7 @@ export const team = [
   },
   {
     id: 't4',
-    name: 'Patrick Habimana',
+    name: 'Igiraneza Mugisha Kabundege Josue ',
     role: 'Content & Curriculum Strategist',
     bio: 'Curates curriculum books, past papers and exercises aligned with the Rwandan competence-based curriculum.',
     avatar: 4,
