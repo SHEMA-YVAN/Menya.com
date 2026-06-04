@@ -1,12 +1,17 @@
-# One-click deploy for Render (https://render.com)
+# One-click deploy for Render (https://render.com) — FREE TIER
 # Deploys MENYA as a SINGLE web service: the Express server builds & serves the
-# Vue frontend AND the API together, with a persistent disk for the SQLite
-# database and uploaded PDFs/covers.
+# Vue frontend AND the API together.
 #
 # How to use:
 #   1. Push this repo to GitHub.
 #   2. On Render: New + → Blueprint → pick your repo → Apply.
 #   3. After first deploy, change ADMIN_PASSWORD + JWT_SECRET in the dashboard.
+#
+# ⚠️ FREE TIER NOTE: the free plan has NO persistent disk, so the database and
+# uploaded files are stored on ephemeral storage. They reset when the service
+# restarts or wakes from sleep. The seeded sample content always returns on boot.
+# For PERMANENT data, upgrade the service to a paid plan and re-add a "disk:"
+# block with DB_PATH=/var/data/data.db and UPLOAD_DIR=/var/data/uploads.
 
 services:
   - type: web
@@ -17,23 +22,11 @@ services:
     buildCommand: npm install && npm --prefix server install && npm run build
     # Start the single unified server (serves website + API)
     startCommand: npm start
-    # Persistent disk so the database and uploads survive restarts/redeploys
-    disk:
-      name: menya-data
-      mountPath: /var/data
-      sizeGB: 1
     envVars:
       - key: NODE_VERSION
         value: "20"
-      - key: PORT
-        value: "10000"
       - key: CORS_ORIGIN
         value: "*"
-      # Store DB + uploads on the persistent disk
-      - key: DB_PATH
-        value: /var/data/data.db
-      - key: UPLOAD_DIR
-        value: /var/data/uploads
       # Auto-generate a strong JWT secret
       - key: JWT_SECRET
         generateValue: true

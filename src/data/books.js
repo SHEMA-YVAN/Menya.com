@@ -3,8 +3,8 @@
 
 export const books = [
   { id: 'b1', title: 'Mathematics for Primary 1', subject: 'Mathematics', level: 'P1', author: 'REB', year: 2023, pages: 124, lang: 'English', cover: 1, downloads: 8420, rating: 4.8 },
-  { id: 'b2', title: 'English Pupil\u2019s Book P2', subject: 'English', level: 'P2', author: 'REB', year: 2022, pages: 98, lang: 'English', cover: 2, downloads: 6210, rating: 4.6 },
-  { id: 'b3', title: 'Igitabo cy\u2019Ikinyarwanda P3', subject: 'Kinyarwanda', level: 'P3', author: 'REB', year: 2023, pages: 110, lang: 'Kinyarwanda', cover: 3, downloads: 5390, rating: 4.7 },
+  { id: 'b2', title: 'English Pupil\'s Book P2', subject: 'English', level: 'P2', author: 'REB', year: 2022, pages: 98, lang: 'English', cover: 2, downloads: 6210, rating: 4.6 },
+  { id: 'b3', title: 'Igitabo cy\'Ikinyarwanda P3', subject: 'Kinyarwanda', level: 'P3', author: 'REB', year: 2023, pages: 110, lang: 'Kinyarwanda', cover: 3, downloads: 5390, rating: 4.7 },
   { id: 'b4', title: 'Elementary Science P4', subject: 'Science', level: 'P4', author: 'REB', year: 2021, pages: 142, lang: 'English', cover: 4, downloads: 4870, rating: 4.5 },
   { id: 'b5', title: 'Mathematics Primary 5', subject: 'Mathematics', level: 'P5', author: 'REB', year: 2023, pages: 168, lang: 'English', cover: 5, downloads: 9120, rating: 4.9 },
   { id: 'b6', title: 'Social Studies P6', subject: 'History', level: 'P6', author: 'REB', year: 2022, pages: 156, lang: 'English', cover: 6, downloads: 7330, rating: 4.6 },
