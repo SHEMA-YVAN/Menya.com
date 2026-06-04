@@ -73,6 +73,9 @@ watch(mobileOpen, (v) => {
 
         <!-- Logged in → profile menu; logged out → log in button -->
         <NotificationBell v-if="isAuthed" />
+        <RouterLink v-if="isAuthed" to="/dashboard" class="btn btn-outline btn-md hidden sm:inline-flex">
+          Dashboard
+        </RouterLink>
         <UserMenu v-if="isAuthed" />
         <button
           v-else

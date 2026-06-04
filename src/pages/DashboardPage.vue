@@ -21,12 +21,21 @@ useMeta({ title: 'My Dashboard' })
 const route = useRoute()
 const router = useRouter()
 const { user, isAuthed, ready, isAdmin, bookmarks, updateName, changePassword, deleteAccount, toggleBookmark, loadBookmarks } = useAuth()
-const { books, pastPapers } = useContentStore()
+const { books, pastPapers, exercises, stats } = useContentStore()
 const { openAuth } = useAuthModal()
 const { notify } = useToast()
 const { download } = useDownload()
 
 const tab = ref(route.query.tab || 'overview')
+const activeTab = computed(() => route.query.tab || 'overview')
+const dashboardLinks = [
+  { id: 'overview', label: 'Overview', icon: LayoutDashboard, to: '/dashboard?tab=overview' },
+  { id: 'books', label: 'Books', icon: BookOpen, to: '/books' },
+  { id: 'exercises', label: 'Exercises', icon: Brain, to: '/exercises' },
+  { id: 'bookmarks', label: 'Bookmarks', icon: Bookmark, to: '/dashboard?tab=bookmarks' },
+  { id: 'activity', label: 'Activity', icon: Activity, to: '/dashboard?tab=activity' },
+  { id: 'settings', label: 'Settings', icon: Settings, to: '/dashboard?tab=settings' },
+]
 watch(() => route.query.tab, (t) => { if (t) tab.value = t })
 function setTab(t) {
   tab.value = t
@@ -241,8 +250,50 @@ const tabs = [
         </div>
       </div>
 
-      <!-- Tabs -->
-      <div class="mt-8 flex gap-1 border-b border-ink-100 dark:border-ink-800">
+      <div class="mt-8 grid gap-6 lg:grid-cols-[280px_minmax(0,1fr)]">
+        <aside class="space-y-5">
+          <div class="sticky top-24 space-y-4">
+            <div class="card border border-ink-100 p-5 dark:border-ink-800">
+              <p class="text-xs uppercase tracking-[0.24em] text-ink-400 dark:text-ink-500">Student dashboard</p>
+              <h2 class="mt-3 font-display text-xl font-semibold text-ink-900 dark:text-white">Your personalized learning hub</h2>
+              <p class="mt-2 text-sm text-ink-500 dark:text-ink-400">Jump straight to books, exercises, bookmarks and progress updates — built for you.</p>
+              <div class="mt-5 grid gap-3">
+                <div class="rounded-3xl bg-slate-50 p-4 dark:bg-ink-950/60">
+                  <p class="text-sm text-ink-500 dark:text-ink-400">Available curriculum</p>
+                  <p class="mt-2 font-display text-2xl font-bold text-ink-900 dark:text-white">{{ stats.books.total }} books</p>
+                </div>
+                <div class="rounded-3xl bg-slate-50 p-4 dark:bg-ink-950/60">
+                  <p class="text-sm text-ink-500 dark:text-ink-400">Practice resources</p>
+                  <p class="mt-2 font-display text-2xl font-bold text-ink-900 dark:text-white">{{ stats.exercises.total }} exercises</p>
+                </div>
+                <div class="rounded-3xl bg-slate-50 p-4 dark:bg-ink-950/60">
+                  <p class="text-sm text-ink-500 dark:text-ink-400">Exam preparation</p>
+                  <p class="mt-2 font-display text-2xl font-bold text-ink-900 dark:text-white">{{ stats.papers.total }} papers</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="card border border-ink-100 p-5 dark:border-ink-800">
+              <p class="text-xs uppercase tracking-[0.24em] text-ink-400 dark:text-ink-500">Quick links</p>
+              <div class="mt-4 space-y-2">
+                <RouterLink
+                  v-for="item in dashboardLinks"
+                  :key="item.id"
+                  :to="item.to"
+                  class="group flex items-center gap-3 rounded-2xl px-4 py-3 transition"
+                  :class="activeTab === item.id ? 'bg-brand-600 text-white shadow-soft' : 'text-ink-600 hover:bg-ink-50 dark:text-ink-300 dark:hover:bg-ink-900 dark:hover:text-white'"
+                >
+                  <component :is="item.icon" class="h-4.5 w-4.5" />
+                  <span class="text-sm font-medium">{{ item.label }}</span>
+                </RouterLink>
+              </div>
+            </div>
+          </div>
+        </aside>
+
+        <section class="space-y-6">
+          <!-- Tabs -->
+          <div class="flex flex-wrap gap-1 border-b border-ink-100 dark:border-ink-800">
         <button
           v-for="tb in tabs"
           :key="tb.id"

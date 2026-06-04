@@ -1,6 +1,6 @@
 <script setup>
 import { computed, ref, watch, onErrorCaptured } from 'vue'
-import { useRoute } from 'vue-router'
+import { useRoute, useRouter } from 'vue-router'
 import Navbar from '@/components/layout/Navbar.vue'
 import Footer from '@/components/layout/Footer.vue'
 import RouteProgress from '@/components/ui/RouteProgress.vue'
@@ -15,8 +15,14 @@ useTheme()
 const { open: authOpen, mode: authMode, closeAuth } = useAuthModal()
 
 const route = useRoute()
+const router = useRouter()
 // Admin routes render their own chrome (AdminShell); hide the public shell there.
 const isAdmin = computed(() => route.path.startsWith('/admin'))
+
+function onAuthSuccess() {
+  closeAuth()
+  router.push('/dashboard')
+}
 
 // Error boundary: if a page throws, show a friendly fallback instead of a blank screen.
 const renderError = ref(null)
@@ -84,7 +90,7 @@ function reloadPage() {
     <BackToTop v-if="!isAdmin" />
 
     <!-- Global login / sign-up modal -->
-    <AuthModal :open="authOpen" :initial-mode="authMode" @close="closeAuth" />
+    <AuthModal :open="authOpen" :initial-mode="authMode" @close="closeAuth" @success="onAuthSuccess" />
   </div>
 </template>
 
