@@ -1,0 +1,13 @@
+node_modules
+server/node_modules
+dist
+server/data.db
+server/data.db-*
+server/uploads/books/*
+server/uploads/papers/*
+!server/uploads/books/.gitkeep
+!server/uploads/papers/.gitkeep
+.git
+.env
+server/.env
+*.log

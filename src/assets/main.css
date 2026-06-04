@@ -1,0 +1,182 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+  html.dark {
+    color-scheme: dark;
+  }
+
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    @apply bg-white text-ink-900 antialiased font-sans;
+    @apply dark:bg-ink-950 dark:text-ink-100;
+  }
+
+  ::selection {
+    @apply bg-brand-500/25 text-brand-900 dark:text-brand-100;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 11px;
+    height: 11px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-ink-300/60 dark:bg-ink-700 rounded-full border-2 border-transparent bg-clip-padding;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-ink-400/70 dark:bg-ink-600;
+  }
+
+  *:focus-visible {
+    @apply outline-none ring-2 ring-brand-500 ring-offset-2 ring-offset-white dark:ring-offset-ink-950 rounded-lg;
+  }
+}
+
+@layer components {
+  .container-page {
+    @apply mx-auto w-full max-w-7xl px-5 sm:px-6 lg:px-8;
+  }
+
+  .section-pad {
+    @apply py-16 sm:py-20 lg:py-28;
+  }
+
+  /* Buttons */
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl font-semibold transition-all duration-200
+           focus-visible:ring-2 focus-visible:ring-brand-500 focus-visible:ring-offset-2 disabled:opacity-50
+           disabled:pointer-events-none select-none;
+  }
+  .btn-lg {
+    @apply px-6 py-3.5 text-base;
+  }
+  .btn-md {
+    @apply px-5 py-2.5 text-sm;
+  }
+  .btn-sm {
+    @apply px-3.5 py-2 text-sm;
+  }
+  .btn-primary {
+    @apply bg-brand-600 text-white shadow-soft hover:bg-brand-700 hover:shadow-glow active:scale-[0.98];
+  }
+  .btn-secondary {
+    @apply bg-ink-900 text-white hover:bg-ink-800 active:scale-[0.98]
+           dark:bg-white dark:text-ink-900 dark:hover:bg-ink-100;
+  }
+  .btn-outline {
+    @apply border border-ink-200 bg-white text-ink-800 hover:border-brand-400 hover:text-brand-700 hover:bg-brand-50
+           dark:border-ink-700 dark:bg-ink-900 dark:text-ink-100 dark:hover:bg-ink-800 dark:hover:border-brand-500 dark:hover:text-brand-300;
+  }
+  .btn-ghost {
+    @apply text-ink-600 hover:text-ink-900 hover:bg-ink-100 dark:text-ink-300 dark:hover:text-white dark:hover:bg-ink-800;
+  }
+
+  /* Cards */
+  .card {
+    @apply rounded-2xl border border-ink-100 bg-white shadow-card transition-all duration-300
+           dark:border-ink-800 dark:bg-ink-900;
+  }
+  .card-hover {
+    @apply hover:-translate-y-1 hover:shadow-soft hover:border-brand-200 dark:hover:border-brand-800/60;
+  }
+
+  /* Inputs */
+  .input {
+    @apply w-full rounded-xl border border-ink-200 bg-white px-4 py-3 text-sm text-ink-900 placeholder-ink-400
+           transition-colors focus:border-brand-500 focus:ring-2 focus:ring-brand-500/30
+           dark:border-ink-700 dark:bg-ink-900 dark:text-ink-100 dark:placeholder-ink-500;
+  }
+  .select {
+    @apply input appearance-none pr-10 cursor-pointer;
+  }
+
+  /* Badges / pills */
+  .badge {
+    @apply inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-xs font-semibold;
+  }
+  .badge-brand {
+    @apply bg-brand-50 text-brand-700 dark:bg-brand-950/60 dark:text-brand-300;
+  }
+  .badge-accent {
+    @apply bg-accent-50 text-accent-700 dark:bg-accent-950/60 dark:text-accent-300;
+  }
+  .badge-gold {
+    @apply bg-gold-50 text-gold-600 dark:bg-gold-600/15 dark:text-gold-300;
+  }
+  .badge-ink {
+    @apply bg-ink-100 text-ink-600 dark:bg-ink-800 dark:text-ink-300;
+  }
+
+  .chip {
+    @apply inline-flex items-center gap-1.5 rounded-full border px-3.5 py-1.5 text-sm font-medium transition-all cursor-pointer;
+  }
+  .chip-idle {
+    @apply border-ink-200 bg-white text-ink-600 hover:border-brand-300 hover:text-brand-700
+           dark:border-ink-700 dark:bg-ink-900 dark:text-ink-300 dark:hover:border-brand-700 dark:hover:text-brand-300;
+  }
+  .chip-active {
+    @apply border-brand-600 bg-brand-600 text-white shadow-soft;
+  }
+
+  .eyebrow {
+    @apply inline-flex items-center gap-2 rounded-full border border-brand-200 bg-brand-50 px-3.5 py-1.5
+           text-xs font-bold uppercase tracking-wider text-brand-700
+           dark:border-brand-800/60 dark:bg-brand-950/40 dark:text-brand-300;
+  }
+
+  .link-underline {
+    @apply relative font-semibold text-brand-700 dark:text-brand-400
+           after:absolute after:-bottom-0.5 after:left-0 after:h-0.5 after:w-0 after:bg-current
+           after:transition-all hover:after:w-full;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-brand-600 via-brand-500 to-accent-600 bg-clip-text text-transparent;
+  }
+  .bg-grid {
+    background-image: radial-gradient(circle at 1px 1px, rgba(99, 112, 136, 0.18) 1px, transparent 0);
+    background-size: 28px 28px;
+  }
+  .bg-grid-dark {
+    background-image: radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.06) 1px, transparent 0);
+    background-size: 28px 28px;
+  }
+  .mask-fade-b {
+    -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+  }
+}
+
+/* Route transition — fade only, non-blocking (no out-in gap → never blank).
+   The page content fades in on navigation; the leaving page fades out without
+   blocking the incoming page from mounting immediately. */
+.route-enter-active {
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+.route-enter-from {
+  opacity: 0;
+  transform: translateY(8px);
+}
+@media (prefers-reduced-motion: reduce) {
+  .route-enter-active {
+    transition: none;
+  }
+  .route-enter-from {
+    transform: none;
+  }
+}

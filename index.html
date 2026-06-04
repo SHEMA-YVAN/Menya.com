@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="MENYA — Rwanda's centralized digital learning platform. Curriculum books, national exam past papers and interactive exercises for learners from P1 to S6."
+    />
+    <meta name="theme-color" content="#0f8f4e" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#03291a" media="(prefers-color-scheme: dark)" />
+    <meta name="author" content="MENYA" />
+    <meta name="keywords" content="Rwanda, REB, curriculum, books, past papers, exercises, P1, S6, e-learning, education" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="apple-touch-icon" href="/favicon.svg" />
+
+    <!-- Open Graph / Twitter (defaults; pages refine these at runtime) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="MENYA" />
+    <meta property="og:title" content="MENYA — Learn. Practice. Excel." />
+    <meta property="og:description" content="Rwanda's free digital learning platform for P1–S6: curriculum books, national exam past papers and interactive exercises." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="MENYA — Learn. Practice. Excel." />
+    <meta name="twitter:description" content="Rwanda's free digital learning platform for P1–S6." />
+
+    <title>MENYA — Learn. Practice. Excel.</title>
+    <!-- Prevent flash of incorrect theme before Vue mounts -->
+    <script>
+      (function () {
+        try {
+          var stored = localStorage.getItem('menya-theme')
+          var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
+          if (stored === 'dark' || (!stored && prefersDark)) {
+            document.documentElement.classList.add('dark')
+          }
+        } catch (e) {}
+      })()
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

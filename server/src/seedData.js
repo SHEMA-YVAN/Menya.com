@@ -1,0 +1,63 @@
+// Seed content for first DB run. Mirrors the frontend sample data so the
+// site is not empty on launch. Admins can add/edit/delete from here onward.
+
+export const seedBooks = [
+  { id: 'b1', title: 'Mathematics for Primary 1', subject: 'Mathematics', level: 'P1', author: 'REB', year: 2023, pages: 124, lang: 'English', cover: 1, downloads: 8420, rating: 4.8 },
+  { id: 'b2', title: 'English Pupil\u2019s Book P2', subject: 'English', level: 'P2', author: 'REB', year: 2022, pages: 98, lang: 'English', cover: 2, downloads: 6210, rating: 4.6 },
+  { id: 'b3', title: 'Igitabo cy\u2019Ikinyarwanda P3', subject: 'Kinyarwanda', level: 'P3', author: 'REB', year: 2023, pages: 110, lang: 'Kinyarwanda', cover: 3, downloads: 5390, rating: 4.7 },
+  { id: 'b4', title: 'Elementary Science P4', subject: 'Science', level: 'P4', author: 'REB', year: 2021, pages: 142, lang: 'English', cover: 4, downloads: 4870, rating: 4.5 },
+  { id: 'b5', title: 'Mathematics Primary 5', subject: 'Mathematics', level: 'P5', author: 'REB', year: 2023, pages: 168, lang: 'English', cover: 5, downloads: 9120, rating: 4.9 },
+  { id: 'b6', title: 'Social Studies P6', subject: 'History', level: 'P6', author: 'REB', year: 2022, pages: 156, lang: 'English', cover: 6, downloads: 7330, rating: 4.6 },
+  { id: 'b7', title: 'Biology Senior 1', subject: 'Biology', level: 'S1', author: 'REB', year: 2023, pages: 210, lang: 'English', cover: 7, downloads: 6610, rating: 4.7 },
+  { id: 'b8', title: 'Chemistry Senior 2', subject: 'Chemistry', level: 'S2', author: 'REB', year: 2022, pages: 224, lang: 'English', cover: 8, downloads: 5980, rating: 4.5 },
+  { id: 'b9', title: 'Physics Senior 3', subject: 'Physics', level: 'S3', author: 'REB', year: 2023, pages: 248, lang: 'English', cover: 9, downloads: 7040, rating: 4.8 },
+  { id: 'b10', title: 'Advanced Mathematics S4', subject: 'Mathematics', level: 'S4', author: 'REB', year: 2023, pages: 312, lang: 'English', cover: 10, downloads: 10240, rating: 4.9 },
+  { id: 'b11', title: 'Geography Senior 5', subject: 'Geography', level: 'S5', author: 'REB', year: 2022, pages: 286, lang: 'English', cover: 11, downloads: 4530, rating: 4.4 },
+  { id: 'b12', title: 'Computer Science S6', subject: 'Computer Science', level: 'S6', author: 'REB', year: 2024, pages: 268, lang: 'English', cover: 12, downloads: 8870, rating: 4.9 },
+  { id: 'b13', title: 'Entrepreneurship Senior 4', subject: 'Entrepreneurship', level: 'S4', author: 'REB', year: 2023, pages: 230, lang: 'English', cover: 13, downloads: 6190, rating: 4.6 },
+  { id: 'b14', title: 'History of Rwanda S6', subject: 'History', level: 'S6', author: 'REB', year: 2022, pages: 274, lang: 'English', cover: 14, downloads: 5710, rating: 4.7 },
+  { id: 'b15', title: 'Le Fran\u00e7ais Senior 1', subject: 'French', level: 'S1', author: 'REB', year: 2021, pages: 188, lang: 'French', cover: 15, downloads: 3920, rating: 4.3 },
+  { id: 'b16', title: 'Chemistry Senior 6', subject: 'Chemistry', level: 'S6', author: 'REB', year: 2024, pages: 320, lang: 'English', cover: 16, downloads: 7460, rating: 4.8 },
+  { id: 'b17', title: 'English Senior 2', subject: 'English', level: 'S2', author: 'REB', year: 2023, pages: 196, lang: 'English', cover: 17, downloads: 5240, rating: 4.5 },
+  { id: 'b18', title: 'Mathematics Senior 6', subject: 'Mathematics', level: 'S6', author: 'REB', year: 2024, pages: 340, lang: 'English', cover: 18, downloads: 11320, rating: 4.9 },
+]
+
+export const seedPapers = [
+  { id: 'p1', subject: 'Mathematics', level: 'P6', year: 2025, type: 'National Exam', duration: '2h 00', questions: 50, downloads: 14200 },
+  { id: 'p2', subject: 'English', level: 'P6', year: 2025, type: 'National Exam', duration: '1h 30', questions: 40, downloads: 9800 },
+  { id: 'p3', subject: 'Science', level: 'P6', year: 2024, type: 'National Exam', duration: '1h 45', questions: 45, downloads: 11200 },
+  { id: 'p4', subject: 'Kinyarwanda', level: 'P6', year: 2024, type: 'National Exam', duration: '1h 30', questions: 40, downloads: 7600 },
+  { id: 'p5', subject: 'Mathematics', level: 'S3', year: 2025, type: 'National Exam', duration: '2h 30', questions: 55, downloads: 16400 },
+  { id: 'p6', subject: 'Biology', level: 'S3', year: 2024, type: 'National Exam', duration: '2h 00', questions: 50, downloads: 10300 },
+  { id: 'p7', subject: 'Physics', level: 'S3', year: 2023, type: 'National Exam', duration: '2h 00', questions: 48, downloads: 8900 },
+  { id: 'p8', subject: 'Chemistry', level: 'S3', year: 2023, type: 'National Exam', duration: '2h 00', questions: 48, downloads: 8100 },
+  { id: 'p9', subject: 'Mathematics', level: 'S6', year: 2025, type: 'National Exam', duration: '3h 00', questions: 60, downloads: 21800 },
+  { id: 'p10', subject: 'Physics', level: 'S6', year: 2025, type: 'National Exam', duration: '3h 00', questions: 58, downloads: 13700 },
+  { id: 'p11', subject: 'Chemistry', level: 'S6', year: 2024, type: 'National Exam', duration: '3h 00', questions: 58, downloads: 12500 },
+  { id: 'p12', subject: 'Biology', level: 'S6', year: 2024, type: 'National Exam', duration: '3h 00', questions: 60, downloads: 11900 },
+  { id: 'p13', subject: 'Geography', level: 'S6', year: 2023, type: 'National Exam', duration: '2h 30', questions: 50, downloads: 6700 },
+  { id: 'p14', subject: 'History', level: 'S6', year: 2023, type: 'National Exam', duration: '2h 30', questions: 50, downloads: 6100 },
+  { id: 'p15', subject: 'Computer Science', level: 'S6', year: 2022, type: 'National Exam', duration: '2h 30', questions: 45, downloads: 9400 },
+  { id: 'p16', subject: 'English', level: 'S3', year: 2022, type: 'National Exam', duration: '2h 00', questions: 45, downloads: 7200 },
+  { id: 'p17', subject: 'Mathematics', level: 'P6', year: 2022, type: 'National Exam', duration: '2h 00', questions: 50, downloads: 8800 },
+  { id: 'p18', subject: 'Entrepreneurship', level: 'S6', year: 2021, type: 'National Exam', duration: '2h 30', questions: 50, downloads: 5400 },
+]
+
+export const seedExercises = [
+  { id: 'q1', subject: 'Mathematics', level: 'P6', difficulty: 'Easy', question: 'What is the value of 7 \u00d7 8?', options: ['54', '56', '64', '49'], answer: 1, explanation: '7 multiplied by 8 equals 56. You can also think of it as 7 \u00d7 8 = (7 \u00d7 4) \u00d7 2 = 28 \u00d7 2 = 56.' },
+  { id: 'q2', subject: 'Mathematics', level: 'P6', difficulty: 'Medium', question: 'A rectangle has a length of 12 cm and a width of 5 cm. What is its area?', options: ['17 cm\u00b2', '34 cm\u00b2', '60 cm\u00b2', '120 cm\u00b2'], answer: 2, explanation: 'Area of a rectangle = length \u00d7 width = 12 \u00d7 5 = 60 cm\u00b2.' },
+  { id: 'q3', subject: 'Mathematics', level: 'S6', difficulty: 'Hard', question: 'What is the derivative of f(x) = 3x\u00b2 + 2x \u2212 5?', options: ['6x + 2', '3x + 2', '6x \u2212 5', '6x\u00b2 + 2'], answer: 0, explanation: 'Using the power rule: d/dx(3x\u00b2) = 6x, d/dx(2x) = 2, and the derivative of a constant is 0. So f\u2032(x) = 6x + 2.' },
+  { id: 'q4', subject: 'Biology', level: 'S3', difficulty: 'Easy', question: 'Which organelle is known as the powerhouse of the cell?', options: ['Nucleus', 'Ribosome', 'Mitochondrion', 'Golgi apparatus'], answer: 2, explanation: 'The mitochondrion produces most of the cell\u2019s ATP through cellular respiration, earning it the nickname "powerhouse of the cell".' },
+  { id: 'q5', subject: 'Biology', level: 'S3', difficulty: 'Medium', question: 'What gas do plants primarily absorb during photosynthesis?', options: ['Oxygen', 'Carbon dioxide', 'Nitrogen', 'Hydrogen'], answer: 1, explanation: 'Plants absorb carbon dioxide (CO\u2082) and, using sunlight and water, convert it into glucose and oxygen during photosynthesis.' },
+  { id: 'q6', subject: 'Physics', level: 'S6', difficulty: 'Medium', question: 'What is the SI unit of electrical resistance?', options: ['Volt', 'Ampere', 'Ohm', 'Watt'], answer: 2, explanation: 'Resistance is measured in ohms (\u03a9). By Ohm\u2019s law, R = V / I, where V is voltage and I is current.' },
+  { id: 'q7', subject: 'Physics', level: 'S6', difficulty: 'Hard', question: 'An object accelerates from rest at 4 m/s\u00b2. What is its velocity after 6 seconds?', options: ['10 m/s', '18 m/s', '24 m/s', '32 m/s'], answer: 2, explanation: 'Using v = u + at with u = 0, a = 4 m/s\u00b2 and t = 6 s: v = 0 + 4 \u00d7 6 = 24 m/s.' },
+  { id: 'q8', subject: 'Chemistry', level: 'S6', difficulty: 'Easy', question: 'What is the chemical symbol for Sodium?', options: ['So', 'Sd', 'Na', 'S'], answer: 2, explanation: 'Sodium\u2019s symbol is Na, from its Latin name "Natrium".' },
+  { id: 'q9', subject: 'English', level: 'P6', difficulty: 'Easy', question: 'Choose the correct plural form of "child".', options: ['childs', 'childes', 'children', 'childrens'], answer: 2, explanation: '"Child" is an irregular noun; its plural is "children".' },
+  { id: 'q10', subject: 'English', level: 'S3', difficulty: 'Medium', question: 'Identify the adverb in: "She sang beautifully at the concert."', options: ['She', 'sang', 'beautifully', 'concert'], answer: 2, explanation: '"Beautifully" describes how she sang \u2014 it modifies the verb "sang", making it an adverb.' },
+  { id: 'q11', subject: 'Geography', level: 'S6', difficulty: 'Medium', question: 'Which is the largest lake in Rwanda?', options: ['Lake Burera', 'Lake Kivu', 'Lake Muhazi', 'Lake Ihema'], answer: 1, explanation: 'Lake Kivu, on the border with the Democratic Republic of Congo, is the largest lake in Rwanda.' },
+  { id: 'q12', subject: 'History', level: 'S6', difficulty: 'Easy', question: 'In which year did Rwanda gain independence?', options: ['1960', '1962', '1965', '1959'], answer: 1, explanation: 'Rwanda gained its independence on 1 July 1962.' },
+  { id: 'q13', subject: 'Mathematics', level: 'S3', difficulty: 'Medium', question: 'Solve for x: 2x + 7 = 19.', options: ['4', '6', '8', '12'], answer: 1, explanation: 'Subtract 7 from both sides: 2x = 12. Divide by 2: x = 6.' },
+  { id: 'q14', subject: 'Chemistry', level: 'S3', difficulty: 'Medium', question: 'What is the pH value of a neutral solution at 25\u00b0C?', options: ['0', '7', '14', '1'], answer: 1, explanation: 'A neutral solution (like pure water) has a pH of 7 at 25\u00b0C. Below 7 is acidic, above 7 is basic.' },
+  { id: 'q15', subject: 'Computer Science', level: 'S6', difficulty: 'Easy', question: 'What does "CPU" stand for?', options: ['Central Processing Unit', 'Computer Personal Unit', 'Central Print Utility', 'Core Processing Underflow'], answer: 0, explanation: 'CPU stands for Central Processing Unit \u2014 the component that executes instructions in a computer.' },
+  { id: 'q16', subject: 'Computer Science', level: 'S6', difficulty: 'Medium', question: 'Which of these is NOT a programming language?', options: ['Python', 'JavaScript', 'HTML', 'Photon'], answer: 3, explanation: '"Photon" is not a programming language. HTML is a markup language, while Python and JavaScript are programming languages.' },
+]

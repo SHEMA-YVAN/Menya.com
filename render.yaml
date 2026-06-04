@@ -1,0 +1,44 @@
+# One-click deploy for Render (https://render.com)
+# Deploys MENYA as a SINGLE web service: the Express server builds & serves the
+# Vue frontend AND the API together, with a persistent disk for the SQLite
+# database and uploaded PDFs/covers.
+#
+# How to use:
+#   1. Push this repo to GitHub.
+#   2. On Render: New + → Blueprint → pick your repo → Apply.
+#   3. After first deploy, change ADMIN_PASSWORD + JWT_SECRET in the dashboard.
+
+services:
+  - type: web
+    name: menya
+    runtime: node
+    plan: free
+    # Install frontend + backend deps, then build the frontend
+    buildCommand: npm install && npm --prefix server install && npm run build
+    # Start the single unified server (serves website + API)
+    startCommand: npm start
+    # Persistent disk so the database and uploads survive restarts/redeploys
+    disk:
+      name: menya-data
+      mountPath: /var/data
+      sizeGB: 1
+    envVars:
+      - key: NODE_VERSION
+        value: "20"
+      - key: PORT
+        value: "10000"
+      - key: CORS_ORIGIN
+        value: "*"
+      # Store DB + uploads on the persistent disk
+      - key: DB_PATH
+        value: /var/data/data.db
+      - key: UPLOAD_DIR
+        value: /var/data/uploads
+      # Auto-generate a strong JWT secret
+      - key: JWT_SECRET
+        generateValue: true
+      # CHANGE THESE in the Render dashboard after first deploy
+      - key: ADMIN_USERNAME
+        value: admin
+      - key: ADMIN_PASSWORD
+        value: menya2026

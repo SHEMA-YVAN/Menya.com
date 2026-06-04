@@ -1,0 +1,36 @@
+{
+  "name": "menya",
+  "version": "1.0.0",
+  "private": true,
+  "description": "MENYA — Centralized digital learning platform for Rwandan learners (P1–S6)",
+  "type": "module",
+  "scripts": {
+    "kill-ports": "kill-port 4000 5173 5174 || exit 0",
+    "predev": "kill-port 4000 5173 5174 || exit 0",
+    "dev:client": "vite --strictPort",
+    "dev:server": "node --watch server/src/index.js",
+    "dev": "concurrently -n CLIENT,SERVER -c green,cyan \"npm:dev:client\" \"npm:dev:server\"",
+    "build": "vite build",
+    "preview": "vite preview",
+    "setup": "npm install && npm --prefix server install",
+    "start": "node server/src/index.js",
+    "serve": "npm run build && npm start"
+  },
+  "dependencies": {
+    "lucide-vue-next": "^0.453.0",
+    "vue": "^3.5.13",
+    "vue-router": "^4.5.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.2.1",
+    "autoprefixer": "^10.4.20",
+    "concurrently": "^9.1.0",
+    "kill-port": "^2.0.1",
+    "postcss": "^8.5.1",
+    "tailwindcss": "^3.4.17",
+    "vite": "^6.0.7"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

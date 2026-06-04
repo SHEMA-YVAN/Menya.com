@@ -1,0 +1,17 @@
+{
+  "name": "MENYA — Learn. Practice. Excel.",
+  "short_name": "MENYA",
+  "description": "Rwanda's free digital learning platform: curriculum books, national exam past papers and interactive exercises for P1–S6.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0f8f4e",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

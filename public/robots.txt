@@ -1,0 +1,5 @@
+# MENYA — robots
+User-agent: *
+Allow: /
+# Keep the admin area out of search results
+Disallow: /admin
