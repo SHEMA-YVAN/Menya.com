@@ -46,13 +46,13 @@ const values = [
           <div class="mt-6 space-y-4 text-lg leading-relaxed text-ink-500 dark:text-ink-300">
             <p>
               Across Rwanda, students spend hours hunting for the right textbook, a past paper from the
-              correct year, or a way to practise what they\u2019ve learned. The resources exist — but they\u2019re
+              correct year, or a way to practise what they've learned. The resources exist — but they're
               scattered, hard to find and often locked away.
             </p>
             <p>
               <strong class="text-ink-700 dark:text-ink-100">MENYA</strong> — meaning
               <em>“to know”</em> in Kinyarwanda — brings everything together. One platform, every level,
-              every subject, completely free. We believe a learner\u2019s success should never depend on how
+              every subject, completely free. We believe a learner's success should never depend on how
               easily they can find materials.
             </p>
           </div>

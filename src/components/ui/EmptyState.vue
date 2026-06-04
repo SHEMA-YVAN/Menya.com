@@ -2,7 +2,7 @@
 import { SearchX } from 'lucide-vue-next'
 defineProps({
   title: { type: String, default: 'No results found' },
-  message: { type: String, default: 'Try adjusting your search or filters to find what you\u2019re looking for.' },
+  message: { type: String, default: 'Try adjusting your search or filters to find what you\'re looking for.' },
 })
 defineEmits(['reset'])
 </script>

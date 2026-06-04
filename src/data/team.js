@@ -33,7 +33,7 @@ export const team = [
     id: 't3',
     name: 'Agatesi Ange Mugasa',
     role: 'UI/UX Designer',
-    bio: 'Shapes MENYA\u2019s visual language and interaction patterns. Focused on clarity, motion and a premium learning experience.',
+    bio: 'Shapes MENYA\'s visual language and interaction patterns. Focused on clarity, motion and a premium learning experience.',
     avatar: 3,
     photo: '/team/divine.jpg',
     socials: {

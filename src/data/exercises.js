@@ -40,7 +40,7 @@ export const exercises = [
     question: 'Which organelle is known as the powerhouse of the cell?',
     options: ['Nucleus', 'Ribosome', 'Mitochondrion', 'Golgi apparatus'],
     answer: 2,
-    explanation: 'The mitochondrion produces most of the cell\u2019s ATP through cellular respiration, earning it the nickname "powerhouse of the cell".',
+    explanation: 'The mitochondrion produces most of the cell\'s ATP through cellular respiration, earning it the nickname "powerhouse of the cell".',
   },
   {
     id: 'q5',
@@ -60,7 +60,7 @@ export const exercises = [
     question: 'What is the SI unit of electrical resistance?',
     options: ['Volt', 'Ampere', 'Ohm', 'Watt'],
     answer: 2,
-    explanation: 'Resistance is measured in ohms (\u03a9). By Ohm\u2019s law, R = V / I, where V is voltage and I is current.',
+    explanation: 'Resistance is measured in ohms (\u03a9). By Ohm\'s law, R = V / I, where V is voltage and I is current.',
   },
   {
     id: 'q7',
@@ -80,7 +80,7 @@ export const exercises = [
     question: 'What is the chemical symbol for Sodium?',
     options: ['So', 'Sd', 'Na', 'S'],
     answer: 2,
-    explanation: 'Sodium\u2019s symbol is Na, from its Latin name "Natrium".',
+    explanation: 'Sodium\'s symbol is Na, from its Latin name "Natrium".',
   },
   {
     id: 'q9',
@@ -163,3 +163,4 @@ export const exercises = [
     explanation: '"Photon" is not a programming language. HTML is a markup language, while Python and JavaScript are programming languages.',
   },
 ]
+

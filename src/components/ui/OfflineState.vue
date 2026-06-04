@@ -3,7 +3,7 @@ import { WifiOff, RefreshCw } from 'lucide-vue-next'
 
 defineProps({
   title: { type: String, default: 'Connection problem' },
-  message: { type: String, default: 'We couldn\u2019t load this content right now. Please check your connection and try again.' },
+  message: { type: String, default: 'We couldn\'t load this content right now. Please check your connection and try again.' },
   retrying: { type: Boolean, default: false },
 })
 defineEmits(['retry'])

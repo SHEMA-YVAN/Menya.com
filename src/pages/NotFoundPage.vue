@@ -22,7 +22,7 @@ const links = [
         This page took a study break
       </h1>
       <p class="mx-auto mt-4 max-w-md text-lg text-ink-500 dark:text-ink-300">
-        We couldn\u2019t find the page you\u2019re looking for. Let\u2019s get you back to learning.
+        We couldn't find the page you're looking for. Let's get you back to learning.
       </p>
 
       <div class="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">

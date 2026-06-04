@@ -103,11 +103,11 @@ export const messages = {
     },
     home: { welcomeBack: 'Murakaza neza, {name}! Komeza urugendo rwawe rwo kwiga.', goToDashboard: 'Jya ku ikibaho' },
     common: { viewAll: 'Reba inzego zose', explore: 'Reba ibikoresho', free: 'Ku buntu', download: 'Kuramo', preview: 'Reba', view: 'Reba', search: 'Shakisha…' },
-    footer: { tagline: 'Urubuga rw\'u Rwanda rw\u2019kwiga ku mbuga. Ibitabo, ibizamini by\u2019igihugu n\u2019imyitozo ku banyeshuri bose, P1 kugeza S6.', resources: 'Ibikoresho', platform: 'Urubuga', getInTouch: 'Twandikire', admin: 'Urubuga rw\u2019Abacunga', rights: 'Yubakiwe abanyeshuri b\u2019u Rwanda.' },
+    footer: { tagline: 'Urubuga rw\'u Rwanda rw\'kwiga ku mbuga. Ibitabo, ibizamini by\'igihugu n\'imyitozo ku banyeshuri bose, P1 kugeza S6.', resources: 'Ibikoresho', platform: 'Urubuga', getInTouch: 'Twandikire', admin: 'Urubuga rw\'Abacunga', rights: 'Yubakiwe abanyeshuri b\'u Rwanda.' },
     pages: {
-      booksTitle: 'Ibitabo by\u2019Integanyanyigisho', booksDesc: 'Shakisha, urebe kandi ukuremo ibitabo bya P1 kugeza S6 — ku buntu.',
-      papersTitle: 'Ibibazo by\u2019Ibizamini by\u2019Igihugu', papersDesc: 'Ibibazo nyabyo bya P6, S3 na S6 kugira ngo wongere ubushobozi bwawe.',
-      exercisesTitle: 'Imyitozo Ikora', exercisesDesc: 'Kwitoza ufata ibisubizo ako kanya hamwe n\u2019ibisobanuro — inzira yihuse yo kwiga.',
+      booksTitle: 'Ibitabo by\'Integanyanyigisho', booksDesc: 'Shakisha, urebe kandi ukuremo ibitabo bya P1 kugeza S6 — ku buntu.',
+      papersTitle: 'Ibibazo by\'Ibizamini by\'Igihugu', papersDesc: 'Ibibazo nyabyo bya P6, S3 na S6 kugira ngo wongere ubushobozi bwawe.',
+      exercisesTitle: 'Imyitozo Ikora', exercisesDesc: 'Kwitoza ufata ibisubizo ako kanya hamwe n\'ibisobanuro — inzira yihuse yo kwiga.',
       aboutTitle: 'Abo MENYA ari bo', contactTitle: 'Twandikire',
     },
   },
@@ -136,7 +136,7 @@ export const messages = {
     sections: {
       featuresEyebrow: 'Tout au m\u00eame endroit',
       featuresTitle: 'Une plateforme pour tout le parcours',
-      featuresSubtitle: 'De votre premier manuel \u00e0 votre examen national final — MENYA a les ressources qu\u2019il vous faut.',
+      featuresSubtitle: 'De votre premier manuel \u00e0 votre examen national final — MENYA a les ressources qu\'il vous faut.',
       levelsEyebrow: 'Parcourir par niveau',
       levelsTitle: 'Commencez \u00e0 votre niveau',
       levelsSubtitle: 'Choisissez votre niveau et acc\u00e9dez aux livres, examens et exercices pertinents.',
@@ -152,13 +152,13 @@ export const messages = {
       subjectsEyebrow: 'Mati\u00e8res populaires',
       subjectsTitle: 'Explorez les mati\u00e8res les plus \u00e9tudi\u00e9es',
       ctaTitle: 'Pr\u00eat \u00e0 commencer \u00e0 apprendre ?',
-      ctaSubtitle: 'Rejoignez des milliers d\u2019\u00e9l\u00e8ves rwandais qui utilisent MENYA — sans inscription, gratuitement.',
+      ctaSubtitle: 'Rejoignez des milliers d\'\u00e9l\u00e8ves rwandais qui utilisent MENYA — sans inscription, gratuitement.',
       ctaExplore: 'Explorer les livres',
       ctaTry: 'Essayer les exercices',
     },
     home: { welcomeBack: 'Bon retour, {name} ! Continuez votre apprentissage.', goToDashboard: 'Aller au tableau de bord' },
     common: { viewAll: 'Voir tous les niveaux', explore: 'Explorer', free: 'Gratuit', download: 'T\u00e9l\u00e9charger', preview: 'Aper\u00e7u', view: 'Voir', search: 'Rechercher…' },
-    footer: { tagline: 'La plateforme d\u2019apprentissage num\u00e9rique du Rwanda. Livres, examens nationaux et exercices interactifs pour tous, de P1 \u00e0 S6.', resources: 'Ressources', platform: 'Plateforme', getInTouch: 'Contactez-nous', admin: 'Portail Admin', rights: 'Con\u00e7u pour les \u00e9l\u00e8ves rwandais.' },
+    footer: { tagline: 'La plateforme d\'apprentissage num\u00e9rique du Rwanda. Livres, examens nationaux et exercices interactifs pour tous, de P1 \u00e0 S6.', resources: 'Ressources', platform: 'Plateforme', getInTouch: 'Contactez-nous', admin: 'Portail Admin', rights: 'Con\u00e7u pour les \u00e9l\u00e8ves rwandais.' },
     pages: {
       booksTitle: 'Livres du Programme', booksDesc: 'Parcourez, pr\u00e9visualisez et t\u00e9l\u00e9chargez les livres de P1 \u00e0 S6 — gratuitement.',
       papersTitle: 'Anciens Examens Nationaux', papersDesc: 'De vrais examens nationaux P6, S3 et S6 pour aff\u00fbter vos comp\u00e9tences.',
@@ -167,3 +167,4 @@ export const messages = {
     },
   },
 }
+

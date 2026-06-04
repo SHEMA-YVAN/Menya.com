@@ -74,9 +74,9 @@ const difficultyBadge = {
 
 const resultMessage = computed(() => {
   const p = quiz.scorePercent.value
-  if (p >= 90) return { title: 'Outstanding!', text: 'You\u2019ve mastered this set. Keep up the brilliant work!' }
-  if (p >= 70) return { title: 'Great job!', text: 'Strong performance — review the few you missed and you\u2019re set.' }
-  if (p >= 50) return { title: 'Good effort!', text: 'You\u2019re getting there. Revisit the explanations and try again.' }
+  if (p >= 90) return { title: 'Outstanding!', text: 'You've mastered this set. Keep up the brilliant work!' }
+  if (p >= 70) return { title: 'Great job!', text: 'Strong performance — review the few you missed and you're set.' }
+  if (p >= 50) return { title: 'Good effort!', text: 'You're getting there. Revisit the explanations and try again.' }
   return { title: 'Keep practising!', text: 'Every attempt helps you improve. Review the explanations and retry.' }
 })
 
@@ -152,7 +152,7 @@ function optionState(i) {
           </span>
           <h2 class="mt-6 font-display text-2xl font-extrabold text-ink-900 dark:text-white">Ready to practise?</h2>
           <p class="mt-3 text-ink-500 dark:text-ink-400">
-            You\u2019ll answer <strong class="text-ink-700 dark:text-ink-200">{{ filtered.length }}</strong> multiple-choice
+            You'll answer <strong class="text-ink-700 dark:text-ink-200">{{ filtered.length }}</strong> multiple-choice
             questions. Get instant feedback and a clear explanation after each one.
           </p>
           <div class="mt-6 flex flex-wrap items-center justify-center gap-3 text-sm text-ink-500 dark:text-ink-400">
@@ -294,7 +294,7 @@ function optionState(i) {
                 <Lightbulb class="mt-0.5 h-5 w-5 shrink-0 text-gold-500" />
                 <div>
                   <p class="text-sm font-bold text-ink-800 dark:text-ink-100">
-                    {{ quiz.responses.value[quiz.currentQuestion.value.id]?.correct ? 'Correct! Well done.' : 'Not quite — here\u2019s why:' }}
+                    {{ quiz.responses.value[quiz.currentQuestion.value.id]?.correct ? 'Correct! Well done.' : 'Not quite — here\'s why:' }}
                   </p>
                   <p class="mt-1 text-sm leading-relaxed text-ink-600 dark:text-ink-300">
                     {{ quiz.currentQuestion.value.explanation }}

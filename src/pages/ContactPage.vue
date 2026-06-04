@@ -55,7 +55,7 @@ function toggleFaq(i) {
   <div>
     <PageHeader
       eyebrow="Get in touch"
-      title="We\u2019d love to hear from you"
+      title="We'd love to hear from you"
       subtitle="Questions, feedback or partnership ideas? Reach out and our team will get back to you soon."
     />
 
@@ -110,7 +110,7 @@ function toggleFaq(i) {
             </span>
             <div>
               <h2 class="font-display text-xl font-bold text-ink-900 dark:text-white">Send us a message</h2>
-              <p class="text-sm text-ink-500 dark:text-ink-400">Fill in the form and we\u2019ll be in touch.</p>
+              <p class="text-sm text-ink-500 dark:text-ink-400">Fill in the form and we'll be in touch.</p>
             </div>
           </div>
 
@@ -119,7 +119,7 @@ function toggleFaq(i) {
             <div v-if="submitted" class="mb-6 flex items-center gap-3 rounded-2xl border border-brand-200 bg-brand-50 p-4 dark:border-brand-800/50 dark:bg-brand-950/30">
               <CheckCircle2 class="h-5 w-5 shrink-0 text-brand-600" />
               <p class="text-sm font-medium text-ink-700 dark:text-ink-200">
-                Thanks! Your message has been sent. We\u2019ll get back to you soon.
+                Thanks! Your message has been sent. We'll get back to you soon.
               </p>
             </div>
           </Transition>
@@ -139,7 +139,7 @@ function toggleFaq(i) {
             </div>
             <div>
               <label for="subject" class="mb-1.5 block text-sm font-semibold text-ink-700 dark:text-ink-200">Subject <span class="font-normal text-ink-400">(optional)</span></label>
-              <input id="subject" v-model="form.subject" type="text" class="input" placeholder="What\u2019s this about?" />
+              <input id="subject" v-model="form.subject" type="text" class="input" placeholder="What's this about?" />
             </div>
             <div>
               <label for="message" class="mb-1.5 block text-sm font-semibold text-ink-700 dark:text-ink-200">Message</label>
